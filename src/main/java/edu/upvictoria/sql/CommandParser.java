@@ -1,6 +1,6 @@
 package edu.upvictoria.sql;
 
-import edu.upvictoria.poo.Exceptions.SQLSyntaxException;
+import edu.upvictoria.Exceptions.SQLSyntaxException;
 
 import java.util.Arrays;
 import java.util.HashMap;

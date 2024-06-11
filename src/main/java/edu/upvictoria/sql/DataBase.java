@@ -1,9 +1,9 @@
 package edu.upvictoria.sql;
 
 import dev.soriane.file.FileUtils;
-import edu.upvictoria.poo.Exceptions.NotADBException;
-import edu.upvictoria.poo.utils.ConsoleColors;
-import edu.upvictoria.poo.utils.FolderUtils;
+import edu.upvictoria.Exceptions.NotADBException;
+import edu.upvictoria.utils.ConsoleColors;
+import edu.upvictoria.utils.FolderUtils;
 
 import java.io.File;
 import java.io.IOException;

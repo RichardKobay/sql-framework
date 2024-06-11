@@ -1,6 +1,6 @@
 package edu.upvictoria.utils;
 
-import edu.upvictoria.poo.Exceptions.DBFormatException;
+import edu.upvictoria.Exceptions.DBFormatException;
 
 import java.io.*;
 import java.util.ArrayList;

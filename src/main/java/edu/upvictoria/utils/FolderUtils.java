@@ -1,7 +1,7 @@
 package edu.upvictoria.utils;
 
 import dev.soriane.file.FileUtils;
-import edu.upvictoria.poo.Exceptions.NotADBException;
+import edu.upvictoria.Exceptions.NotADBException;
 import jdk.jshell.spi.ExecutionControl;
 
 import java.io.File;

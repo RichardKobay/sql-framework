@@ -1,8 +1,8 @@
 package edu.upvictoria.sql;
 
-import edu.upvictoria.poo.Exceptions.DBAlreadyExistsException;
-import edu.upvictoria.poo.Exceptions.SQLSyntaxException;
-import edu.upvictoria.poo.utils.ConsoleColors;
+import edu.upvictoria.Exceptions.DBAlreadyExistsException;
+import edu.upvictoria.Exceptions.SQLSyntaxException;
+import edu.upvictoria.utils.ConsoleColors;
 
 import java.io.IOException;
 import java.util.HashMap;
