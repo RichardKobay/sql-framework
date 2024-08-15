@@ -1,0 +1,24 @@
+top comandos SQL
+	- Database manipulation ✅
+		- create database ✅
+		- use database ✅
+		- drop database ✅
+
+	- Table manipulation
+		- create table ✅
+		- alter table ✅
+			- add column ✅
+			- drop column ✅
+			- rename column ✅
+			- modify column ✅
+			- add constraint ✅
+			- remove constraint ✅
+		- drop table ✅
+
+	- Data Manipulation
+		- insert ♿
+		- select
+			- where
+			- joins
+		- update ♿
+		- delete ♿

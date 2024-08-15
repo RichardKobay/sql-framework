@@ -24,10 +24,41 @@
       <version>5.10.0</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>2.11.0</version>
+    </dependency>
+    <!--  personal library  -->
     <dependency>
       <groupId>dev.soriane</groupId>
-      <artifactId>utils</artifactId>
-      <version>1.1</version>
+      <artifactId>plibs</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>dev.soriane</groupId>
+      <artifactId>dtd-xml-parser</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.java-websocket/Java-WebSocket -->
+    <dependency>
+      <groupId>org.java-websocket</groupId>
+      <artifactId>Java-WebSocket</artifactId>
+      <version>1.5.4</version>
+    </dependency>
+    <!-- SLF4J API -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.32</version>
+    </dependency>
+
+    <!-- SLF4J Simple implementation -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.32</version>
     </dependency>
   </dependencies>
 

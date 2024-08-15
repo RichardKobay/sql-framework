@@ -1,53 +1,28 @@
 package edu.upvictoria;
 
-import dev.soriane.scanner.BrScanner;
-import edu.upvictoria.Exceptions.DBAlreadyExistsException;
-import edu.upvictoria.Exceptions.NotADBException;
-import edu.upvictoria.Exceptions.SQLSyntaxException;
-import edu.upvictoria.sql.*;
-import edu.upvictoria.utils.ConsoleColors;
+import dev.soriane.dtdxmlparser.exceptions.NeedChildElementException;
+import dev.soriane.dtdxmlparser.exceptions.XMLColumnDoesNotExistsException;
+import dev.soriane.dtdxmlparser.exceptions.XMLTableDoesNotExistsException;
+import dev.soriane.plibs.file.FileManager;
+import edu.upvictoria.sqlframework.connection.CustomWebSocketServer;
+import edu.upvictoria.sqlframework.exceptions.*;
+import edu.upvictoria.sqlframework.sql.commands.select.Where;
+import edu.upvictoria.sqlframework.utils.Csv;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class App
 {
-    public static void main( String[] args )
-    {
-        DataBase dataBase;
-
-        while (true) {
-            String dbPath = "";
-            System.out.println("Give me a database path");
-            dbPath = BrScanner.readLine();
-            try {
-                dataBase = new DataBase(dbPath);
-            } catch (NotADBException e) {
-                System.out.println(ConsoleColors.ANSI_RED_BACKGROUND + ConsoleColors.ANSI_BLACK + "The folder is not a database" + ConsoleColors.ANSI_RESET);
-                continue;
-            } catch (IOException e) {
-                System.out.println(ConsoleColors.ANSI_RED_BACKGROUND + ConsoleColors.ANSI_BLACK + "There was an error opening the database" + ConsoleColors.ANSI_RESET);
-                continue;
-            }
-            break;
-        }
-
-        CommandInterpreter commandInterpreter = new CommandInterpreter(
-                dataBase,
-                new Actions(dataBase, new CommandParser())
-        );
-
-        String command = "";
-        while (!command.equals("quit")) {
-            command = Reader.readCommand();
-            try {
-                commandInterpreter.checkCommand(command);
-            } catch (SQLSyntaxException | IOException | DBAlreadyExistsException e) {
-                System.out.println(ConsoleColors.ANSI_RED_BACKGROUND + ConsoleColors.ANSI_BLACK + e.getMessage() + ConsoleColors.ANSI_RESET);
-            }
-        }
+    public static void main( String[] args ) throws SQLException, NoDatabaseSelectedException, NeedChildElementException, IOException, DatabaseDesNotExistsException, SQLSyntaxException, ParserConfigurationException, SAXException, TableDoesNotExistsException, XMLTableDoesNotExistsException, XMLColumnDoesNotExistsException, CsvElementDoesNotExistsException {
+        int port = 7777;
+        CustomWebSocketServer server = new CustomWebSocketServer(new InetSocketAddress(port));
+        server.start();
     }
 }
